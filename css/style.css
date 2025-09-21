@@ -1,3 +1,4 @@
+/* ===== Reset and base styles ===== */
 * { box-sizing: border-box;}
 
 html, body {
@@ -9,11 +10,13 @@ html, body {
     color: #111;
 }
 
+/* Headingds centered and consistent spacing */
 h1, h2, h3 {
     margin: 0 0 0.5rem;
     text-align: center;
 }
 
+/* Content elements, readable width and spacing */
 p, ul, figure, figcaption {
     max-width: 70ch;
     margin: 0.5rem auto;
@@ -22,6 +25,7 @@ p, ul, figure, figcaption {
 
 main{ padding: 1rem 0; }
 
+/* ===== Unique ID styles (headers/footers) ===== */
 #site-header,
 #site-footer,
 #page2-header,
@@ -29,6 +33,7 @@ main{ padding: 1rem 0; }
     text-align: center;
 }
 
+/* ===== Reusable class styles */
 .band {
     background: #dbe7ff;
     border-top: 1px solid #c6d6ff;
@@ -36,9 +41,11 @@ main{ padding: 1rem 0; }
     padding: 1rem;
 }
 
+/* Header text classes */
 .title { font-size: 2rem; }
 .subtitle { font-size: 1rem; opacity: 0.85; }
 
+/*Card layout for sections */
 .card {
     background: #fff;
     border: 1px solid #e5eaf2;
@@ -51,6 +58,7 @@ main{ padding: 1rem 0; }
 
 .card h2.section-title { text-align: left; }
 
+/* ===== Flexbox layout ===== */
 .flex-row {
     display: flex;
     flex-wrap: wrap;

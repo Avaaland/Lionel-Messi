@@ -1,18 +1,38 @@
 <!DOCTYPE html>
-<html>
+
+<!--Declare language-->
+<html lang="en">
 <head>
+    <!--Ensure special characters render correctly-->
+    <meta charset="utf-8">
+    <!--Mobile scaling-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lionel Andrés "Leo" Messi - Home</title>
     <!--Link to external stylesheet-->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <!--Skip link for keyboard users-->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <!--Header announces the page topic and small intro-->
-    <header id="site-header" class="band">
+    <!--Role clarifies landmark-->
+    <header id="site-header" class="band" role="banner">
         <h1 class="title">Lionel Messi</h1>
         <p class="subtitle">The story of the GOAT</p>
+
+        <!--Primary navigation with aria-current to indicate active page-->
+        <nav aria-label="Primary" role="navigation">
+            <ul class="nav">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="page2.html">Career &amp; Stats</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main id="content">
+    <!--Main landmark, id connects to skip link-->
+    <main id="main" role="main">
         <!--Section groups overview content. aria-labelledby points to the h2 below-->
         <section aria-labelledby="overview-heading" class="card">
             <h2 id="overview-heading">Who is Messi?</h2>
@@ -31,10 +51,11 @@
             </p>
         </section>
         
-        <!--Flexbox conatiner. Quick facts and image side by side-->
-        <div class="flex-row">
-            <!--Quick facts as an unordered list-->
-            <section aria-labelledby="quick-facts-heading" class="card">
+        <!--Two column on wide screens. Stacks on phone via CSS .two-col + media query-->    
+        <section aria-labelledby="quick-facts-heading" class="card two-col">
+            <!--Column 1-->
+            <div>
+                <!--Quick facts as an unordered list-->
                 <h2 id="quick-facts-heading">Quick Facts</h2>
                 <h3>Highlights at a Glance</h3>
                 <ul>
@@ -44,22 +65,25 @@
                     <li>Nationality: Argentinian</li>
                     <li>Date of Birth: 06/24/1987</li>
                 </ul>
-            </section>
+            </div>
 
-            <!--Image with relative path, alt, and width-->
-            <section aria-labelledby="image-heading" class="card">
-                <h2 id="image-heading">Messi Winning the Balon d'Or</h2>
-                <figure>
-                    <img src="images/messi.jpg" alt="Lionel holding the Balon d'Or in Paris" width="420" />
-                    <figcaption>Lionel Messi winning his 8th Balon d'Or proving yet again he is the best player on earth.</figcaption>
+            <!--Column 2-->
+            <div>
+                <h3>Messi Winning the Ballon d'Or</h3>
+                <figure> <!--Groups image and caption semantically-->
+                    <img
+                    src="images/messi.jpg"
+                    alt="Lionel Messi holding the Ballon d'Or trophy during a ceremony in Paris"
+                    width="420">
+                    <figcaption>Messi winning his record 8th Ballon d'Or</figcaption>
                 </figure>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
     <!--Footer includes required internal link to Page 2-->
-    <footer id="site-footer" class="band">
-        <a href="page2.html">Read more on Page 2</a>
+    <footer id="site-footer" class="band" role="contentinfo">
+        <a href="page2.html">You can read more here!</a>
     </footer>
 </body>
 </html>

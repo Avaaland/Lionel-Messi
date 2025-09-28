@@ -1,17 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Lionel Messi - Page 2</title>
     <!--Link to external stylesheet-->
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <!--Header with page title-->
-    <header id="page2-header" class="band">
+    <header id="page2-header" class="band" role="banner">
         <h1>Messi: Style, Milestones, and Legacy</h1>
+
+        <nav aria-label="Primary" role="navigation">
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="page2.html" aria-current="page">Career &amp; Stats</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
+    <main id="main" role="main">
         <!--Playing style section-->
         <section aria-labelledby="style-heading" class="card">
             <h2 id="style-heading">Playing Style</h2>
@@ -27,42 +39,43 @@
             </p>
         </section>
 
-        <!--Flexbox container. Career timeline and legacy-->
-        <div class="flex-row">
-            <!--Ordered list, career timeline-->
-            <section aria-labelledby="timeline-heading" class="card">
-                <h2 id="timeline-heading">Career Timeline</h2>
-                <h3>Milestones</h3>
-                <ol>
-                    <li>Debuted for FC Barcelona at the age of 17</li>
-                    <li>Becomes FC Barcelona's all time top scorer</li>
-                    <li>Wins 8 Balon d'Or</li>
-                    <li>Captains Argentina to Copa America and World Cup glory</li>
-                    <li>European Golden Shoe Winner 6 times</li>
-                </ol>
-                <p>
-                    These are only a few of the many milestones in Messi's career.
-                </p>
+            <!--Ordered list, Career-->
+            <section aria-labelledby="Career-legacy" class="card two-col">
+                <h2 id="Career-legacy" class="sr-only">Career and Legacy</h2>
 
-            </section>
+                <!--Column 1-->
+                <div>
+                    <h2 id="Milestone-heading">Career Milestones</h2>
+                    <h3>Milestones</h3>
+                    <ol>
+                        <li>Debuted for FC Barcelona at the age of 17</li>
+                        <li>Becomes FC Barcelona's all time top scorer</li>
+                        <li>Wins 8 Balon d'Or</li>
+                        <li>Captains Argentina to Copa America and World Cup glory</li>
+                        <li>European Golden Shoe Winner 6 times</li>
+                    </ol>
+                    <p>
+                        These are only a few of the many milestones in Messi's career.
+                    </p>
+                </div>
 
-            <!--Legacy section-->
-            <section aria-labelledby="legacy-heading" class="card">
-                <h2 id="legacy-heading">Legacy and Accolades</h2>
-                <p>
+                <!--Column 2-->
+                <div>
+                    <h2 id="legacy-heading">Legacy and Accolades</h2>
+                    <p>
                     Messi's legacy is much more than goals and trophies. He is seen as a once-in-a-generation player, and there will not be a more
                     iconic rivalry, than the rivalry between Lionel Messi and Cristiano Ronaldo.
-                </p>
-                <p>
-                    Messi holds many major accolades. He holds a record for most Balon d'Or at 8, a record for most European Golden Shoes at 6, and
-                    a record of 9 La Liga MVP awards. He recently won the World Cup with Argentina, the only major trophy he hadn't won.
-                </p>
+                    </p>
+                    <p>
+                        Messi holds many major accolades. He holds a record for most Balon d'Or at 8, a record for most European Golden Shoes at 6, and
+                        a record of 9 La Liga MVP awards. He recently won the World Cup with Argentina, the only major trophy he hadn't won.
+                    </p>
+                </div>
             </section>
-        </div>
     </main>
 
     <!--Footer with internal link back to home-->
-    <footer id="page2-footer" class="band">
+    <footer id="page2-footer" class="band" role="contentinfo">
         <a href="index.html">Back to Home</a>
     </footer>
 </body>

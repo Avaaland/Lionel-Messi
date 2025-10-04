@@ -17,30 +17,29 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="bg-light text-dark"> <!--Bootstrap backgroung/text-->
     <!--Skip link for keyboard users-->
     <a class="skip-link" href="#main">Skip to main content</a>
 
     <!--Header announces the page topic and small intro-->
-    <!--Role clarifies landmark-->
-    <header id="site-header" class="band" role="banner">
+    <!--Bootstrap container centers content and adds responsive padding-->
+    <header id="site-header" class="band container text-center py-3">
         <h1 class="title">Lionel Messi</h1>
         <p class="subtitle">The story of the GOAT</p>
 
-        <!--Primary navigation with aria-current to indicate active page-->
-        <nav aria-label="Primary" role="navigation">
-            <ul class="nav">
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="page2.html">Career &amp; Stats</a></li>
-            </ul>
+        <!--Boostrap nav utilities-->>
+        <nav class="d-flex justify-content-center gap-3 mt-2">
+            <a href="index.html" aria-current="page" class="text-decoration-none fw-bold text-primary">Home</a></li>
+            <a href="page2.html" class="text-decoration-none text-secondary">Career &amp; Stats</a></li>
         </nav>
     </header>
 
     <!--Main landmark, id connects to skip link-->
-    <main id="main" role="main">
+    <!--Bootstrap's "container" keeps content centered and responsive-->
+    <main id="main" class="container my-4">
         <!--Section groups overview content. aria-labelledby points to the h2 below-->
-        <section aria-labelledby="overview-heading" class="card">
-            <h2 id="overview-heading">Who is Messi?</h2>
+        <section aria-labelledby="overview-heading" class="card p-3 shadow-sm mb-4">
+            <h2 id="overview-heading" class="text-center mb-3">Who is Messi?</h2>
             <p>
                 Messi was born in Rosario, Argentina on June 24 in 1987. He started his soccer career at his local club, Newell's Old Boys.
                 At the young age of 13, Messi and his family moved to Barcelona, because Messi had just signed for FC Barcelona's academy, 
@@ -56,39 +55,35 @@
             </p>
         </section>
         
-        <!--Two column on wide screens. Stacks on phone via CSS .two-col + media query-->    
-        <section aria-labelledby="quick-facts-heading" class="card two-col">
-            <!--Column 1-->
-            <div>
-                <!--Quick facts as an unordered list-->
-                <h2 id="quick-facts-heading">Quick Facts</h2>
-                <h3>Highlights at a Glance</h3>
-                <ul>
-                    <li>Positions: Right Wing / Forward</li>
-                    <li>Known for: Dribbling, Passing, Playmaking, Winning</li>
-                    <li>Clubs: FC Barcelona, PSG, Inter Miami CF</li>
-                    <li>Nationality: Argentinian</li>
-                    <li>Date of Birth: 06/24/1987</li>
-                </ul>
+        <!--Bootstrap grid for two columns-->
+        <div class="row g-3"><!--g-3 adds gap-->
+            <div class="col-md-6">
+                <section class="card p-3 h-100">
+                    <h2 class="text-center">Quick Facts</h2>
+                    <h3 class="text-center">Highlights at a Glance</h3>
+                    <ul>
+                        <li>Positions: Right Wing / Forward</li>
+                        <li>Known for: Dribbling, Passing, Playmaking, Winning</li>
+                        <li>Clubs: FC Barcelona, PSG, Inter Miami CF</li>
+                        <li>Nationality: Argentinian</li>
+                        <li>Date of Birth: 06/24/1987</li>
+                    </ul>
+                </section>
             </div>
-
-            <!--Column 2-->
-            <div>
-                <h3>Messi Winning the Ballon d'Or</h3>
-                <figure> <!--Groups image and caption semantically-->
-                    <img
-                    src="images/messi.jpg"
-                    alt="Lionel Messi holding the Ballon d'Or trophy during a ceremony in Paris"
-                    width="420">
-                    <figcaption>Messi winning his record 8th Ballon d'Or</figcaption>
-                </figure>
+       
+            <div class="col-md-6">
+                <section class="card p-3 h-100">
+                    <h3 class="text-center">Messi Winning the Ballon d'Or</h3>
+                    <img src="images/messi.jpg" alt="Lionel Messi holding the Ballon d'Or trophy during a ceremony in Paris" class="img-fluid rounded">
+                    <figcaption class="text-center small mt-2">Messi winning his record 8th Ballon d'Or</figcaption>
+                </section>
             </div>
-        </section>
+        </div>
     </main>
 
     <!--Footer includes required internal link to Page 2-->
-    <footer id="site-footer" class="band" role="contentinfo">
-        <a href="page2.html">You can read more here!</a>
+    <footer class="text-center py-4 bg-light border-top">
+        <a href="page2.html" class="btn btn-primary">You can read more here!</a> <!--Upgraded link to button-->
     </footer>
 </body>
 </html>

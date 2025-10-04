@@ -40,52 +40,6 @@ main{ padding: 1rem 0; } /* Breathing room around main content */
 .title { font-size: 2rem; } /* Visual hierarchy for H1 */
 .subtitle { font-size: 1rem; opacity: 0.85; } /* Slightly muted subtitle */
 
-/*Card layout for sections */
-.card {
-    background: #fff; /* White background */
-    border: 1px solid #e5eaf2; /* Light border for definition */
-    border-radius: 12px; /* Friendly corners */
-    padding: 1rem; /* Inner spacing */
-    margin: 1rem auto; /* Space between cards and centered */
-    max-width: 900px; /* Comfortable reading width */
-    box-shadow: 0 1px 2px rgba(0,0,0,0.04); /* Subtle depth */
-}
-
-.card h2.section-title { text-align: left; } /* Utility rule for h2 with
-class="section-title", text aligns to the left */
-
-/* ===== Flexbox layout ===== */
-.flex-row {
-    display: flex; /* Horizontal layout */
-    flex-wrap: wrap; /* Wrap on narrow screens */
-    gap: 1rem; /* Space between cards */
-    justify-content: center; /* Center row content */
-    align-items: flex-start; /* Align to top edge for tidy columns */
-    max-width: 1100px; /* Prevent ultra wide lines */
-    margin: 0 auto; /* Center container */
-    padding: 0 1rem; /* Side padding for small screens */
-}
-
-.flex-row .card {
-    flex: 1 1 340px; /* Flexible columns with minimum useful width */
-}
-
-/* ===== Accessible navigation and links ===== */
-.nav {
-    list-style: none; /* Remove bullets for horizontal nav */
-    display: flex; gap: 1rem; /* Space between items */
-    padding: 0; margin: .5rem 0 0; /* Tidy spacing around nav */
-    flex-wrap: wrap; /* Wrap on small screens */
-}
-a {
-    color: #1d4ed8; /* Color with good contrast */
-    text-decoration: underline; /* Underlines for colorblind */
-}
-
-a:hover, a:focus {
-    text-decoration-thickness: 2px; /* Stronger visual feedback */
-}
-
 /* ===== Image handling ===== */
 img {
     max-width: 100%; /* Prevent image overflow on smaller screens */
@@ -111,38 +65,16 @@ img {
     z-index: 1000;
 }
 
-/* ===== Two-column helper ===== */
-.two-col { /* Side-by-side layout on wide screens */
-    display: flex; 
-    gap: 1rem; 
-    align-items: flex-start;
-}
-.two-col > * { /* Even columns, prevent overflow from long content */
-    flex: 1 1 0;
-    min-width: 0;
-}
-
-/* ===== Screen-reader-only used on page 2  ===== */
-.sr-only {
-    position: absolute !important; height: 1px; width: 1px;
-    overflow: hidden; clip: rect(1px, 1px, 1px, 1px); white-space: nowrap;
-}
-
 /* ===== Media Queries ===== */
 
 /* Phones and small screens, 600px and below */
 @media (max-width: 600px) {
     body { font-size: 16px; } /* Make sure base text is readable on phones */
-
-    .two-col { flex-direction: column; } /* Stack columns on small screens */
-    .flex-row .card { flex: 1 1 100%; } /* Each card becomes full width in one column */
-    .card { padding: 1rem; } /* Slightly tighter spacing */
 }
 
 /* Tablets and up */
 @media (min-width:768px) {
     body { font-size: 18px; } /* Slightly larger type on bigger screens */
-    .card { padding: 1.25rem 1.5rem; } /* Scale spacing */
 }
 
 /* Desktops and up */

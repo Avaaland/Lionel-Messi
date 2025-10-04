@@ -9,7 +9,7 @@ html, body {
     color: #111; /* Black text for strong contrast */
 }
 
-/* Headingds centered and consistent spacing */
+/* Headings centered and consistent spacing */
 h1, h2, h3 {
     margin: 0 0 0.5rem; /* Small bottom margin */
     text-align: center; /* Center headings */
@@ -18,18 +18,13 @@ h1, h2, h3 {
 /* Content elements, readable width and spacing */
 p, ul, figure, figcaption {
     max-width: 70ch; /* Optimal line length for readability */
-    margin: 0.5rem auto; /* Center in page with vertical rythhm */
+    margin: 0.5rem auto; /* Center in page with vertical rhythm */
     padding: 0 1rem; /* Side padding so text doesn't touch edges */
 }
 
 main{ padding: 1rem 0; } /* Breathing room around main content */
 
-/* ===== Unique ID styles (headers/footers) ===== */
-#site-header, #site-footer, #page2-header, #page2-footer {
-    text-align: center; /* Centering for header/footer */
-}
-
-/* ===== Reusable class styles */
+/* ===== Specific components ===== */
 .band {
     background: #dbe7ff; /* Soft background */
     border-top: 1px solid #c6d6ff; /* Subtle separators */
@@ -37,8 +32,22 @@ main{ padding: 1rem 0; } /* Breathing room around main content */
     padding: 1rem; /* Inner spacing */
 }
 
-.title { font-size: 2rem; } /* Visual hierarchy for H1 */
-.subtitle { font-size: 1rem; opacity: 0.85; } /* Slightly muted subtitle */
+#site-header, #site-footer, #page2-header, #page2-footer {
+    text-align: center; /* Centering for header/footer */
+}
+
+/* Title/subtitle styling  */
+.title {
+    font-family: 'Georgia', serif; /* Contrast to Bootstrap sans-serif */
+    font-size: 2.25rem; /* Slightly larger than h1 */
+    letter-spacing: 0.5px; /* Spacing */
+}
+
+.subtitle {
+    color: #3b3b3b; /* Softer tone under main title */
+    font-style: italic; /* Font-style */
+    opacity: 0.9;
+}
 
 /* ===== Image handling ===== */
 img {
@@ -51,27 +60,6 @@ img {
 :focus-visible {
     outline: 3px solid #f59e0b; /* High-contrast focus ring for keyboard users */
     outline-offset: 2px; /* Space between element and outline for clarity */
-}
-
-/* Typography and header styles */
-.title {
-    font-family: 'Georgia', serif; /* Contrast to Boostrap sans-serif */
-    font-size: 2.25rem; /* Slightly larger than h1 */
-    letter-spacing: 0.5px; /* Spacing */
-}
-
-.subtitle {
-    color: #3b3b3b; /* Softer tone under main title */
-    font-style: italic; /* Font-style */
-    opacity: 0.9;
-}
-
-/* Header/footer */
-.band {
-    background: #dbe7ff; /* Light blue color */
-    border-top: 1px solid #c6d6ff;
-    border-bottom: 1px solid #c6d6ff;
-    padding: 1rem;
 }
 
 /* Skip link hidden by default, visible when focused. Keyboard users press tab */
